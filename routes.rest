@@ -1,0 +1,74 @@
+### for all tasks 
+Get http://localhost:3001/users
+
+### for a single task
+Get http://localhost:3001/users/67db68fd2f31d775f9062704
+
+### create user
+Post http://localhost:3001/users
+Content-Type: application/json
+
+{
+    "firstName": "Nick",
+    "lastName": "Ruppe",
+    "password": "this",
+    "email": "nick.ruppe1125@gmail.com"
+}
+
+### update user
+Put http://localhost:3001/users/67db6fb5c57cf237d2f9f338
+Content-Type: application/json
+
+{
+    "firstName": "Nick",
+    "lastName": "Ruppe",
+    "password": "GreatPassword",
+    "email": "nick.ruppe1125@gmail.com"
+}
+
+### delete the user
+Delete http://localhost:3001/users/67db6fb5c57cf237d2f9f338
+
+
+
+
+
+
+### test getting task userid
+Get http://localhost:3001/tasks/67db68fd2f31d775f9062704
+
+### get single task for user   taskid
+Get http://localhost:3001/tasks/67db781807f03d2c99eb4663/67db68fd2f31d775f9062704
+
+### create a new task
+POST  http://localhost:3001/tasks/67db68fd2f31d775f9062704
+Content-Type: application/json
+
+{
+    "title": "Node project",
+    "description": "this shows my skills in node",
+    "dueDate": "March 22, 2025",
+    "progress": "woriking on it",
+    "instructor": "jeremy lindsy",
+    "subject": "web development"
+}
+
+
+### update the task userid/taskid
+PUT http://localhost:3001/tasks/67db68fd2f31d775f9062704/67dca22ae1593be37c9b4b63
+Content-Type: application/json
+
+{
+    "title": "Node project",
+    "description": "this shows my skills in node",
+    "dueDate": "March 22, 2025",
+    "progress": "finished it.",
+    "instructor": "jeremy lindsy",
+    "subject": "node class"
+}
+
+
+### delete a task  userid/taskid
+Delete  http://localhost:3001/tasks/67db68fd2f31d775f9062704/67db781807f03d2c99eb4663
+
+

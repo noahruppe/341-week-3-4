@@ -23,8 +23,8 @@ const getSingle = async (req, res) => {
             return res.status(400).json("You must have a valid id to find task");
         }
         
-        const userId = new ObjectId(req.params.userid);
-        const tasksId = new ObjectId(req.params.taskid);
+        const userId = new ObjectId(req.params.userId);
+        const tasksId = new ObjectId(req.params.taskId);
         const result = await mongodb.getDatabase().db().collection("tasks").find({userId: userId,  _id: tasksId });
         const tasks = await result.toArray();
 

@@ -4,6 +4,7 @@ const ObjectId =  require("mongodb").ObjectId;
 
 
 const getAll = async(req,res) =>{
+    // #swagger.tags = ["Tasks"]
     const userId = new ObjectId(req.params.id);
     const result = await mongodb.getDatabase().db().collection("tasks").find({userId: userId});
     result.toArray().then((tasks) =>{
@@ -16,6 +17,7 @@ const getAll = async(req,res) =>{
 }
 
 const getSingle = async(req,res) =>{
+    // #swagger.tags = ["Tasks"]
     if(!ObjectId.isValid(req.params.id)){
         res.status(400).json("you must have a valid id to find task");
     }
@@ -32,6 +34,7 @@ const getSingle = async(req,res) =>{
 }
 
 const createTask = async (req,res) =>{
+    // #swagger.tags = ["Tasks"]
     const userId = new ObjectId(req.params.userId);
     const task = {
         title: req.body.title,
@@ -51,6 +54,7 @@ const createTask = async (req,res) =>{
 };
 
 const updateTask = async (req,res) =>{
+    // #swagger.tags = ["Tasks"]
     if(!ObjectId.isValid(req.params.id)){
         res.status(400).json("you must have a valid id to update task");
     }
@@ -74,6 +78,7 @@ const updateTask = async (req,res) =>{
 }
 
 const deleteTask = async (req,res) =>{
+    // #swagger.tags = ["Tasks"]
     if(!ObjectId.isValid(req.params.id)){
         res.status(400).json("you must have a valid id to delete task");
     }

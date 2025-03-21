@@ -2,6 +2,7 @@ const mongodb = require("../data/database");
 const ObjectId = require("mongodb").ObjectId;
 
 const getAll = async(req, res) =>{
+    // #swagger.tags = ["Users"]
     const result = await mongodb.getDatabase().db().collection("users").find()
     result.toArray().then((users) =>{
         res.setHeader("Content-type", "application/json");
@@ -13,6 +14,7 @@ const getAll = async(req, res) =>{
 };
 
 const getSingle = async (req,res) =>{
+    // #swagger.tags = ["Users"]
     if(!ObjectId.isValid(req.params.id)){
         res.status(400).json("you must have a valid id to find user");
     }
@@ -28,6 +30,7 @@ const getSingle = async (req,res) =>{
 }
 
 const CreateUser = async (req,res) =>{
+    // #swagger.tags = ["Users"]
     const user = {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -44,6 +47,7 @@ const CreateUser = async (req,res) =>{
 };
 
 const updateUser = async (req,res) =>{
+    // #swagger.tags = ["Users"]
     if(!ObjectId.isValid(req.params.id)){
         res.status(400).json("you must have a valid id to update user");
     }
@@ -64,6 +68,7 @@ const updateUser = async (req,res) =>{
 };
 
 const deleteUser = async (req,res) =>{
+    // #swagger.tags = ["Users"]
     if(!ObjectId.isValid(req.params.id)){
         res.status(400).json("you must have a valid id to delete user");
     }

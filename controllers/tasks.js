@@ -25,11 +25,11 @@ const getSingle = async (req, res) => {
         
         const userId = new ObjectId(req.params.userid);
         const tasksId = new ObjectId(req.params.taskid);
-        const result = await mongodb.getDatabase().db().collection("tasks").find({userId: userId , _id: tasksId});
+        const result = await mongodb.getDatabase().db().collection("tasks").find({userId: userId,  _id: tasksId });
         const tasks = await result.toArray();
 
         res.setHeader("Content-type", "application/json");
-        res.status(200).json(tasks);
+        res.status(200).json(tasks[0]);
     } catch (err) {
         res.status(500).json({ message: "An error occurred while fetching the task", error: err });
     }

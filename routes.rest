@@ -9,10 +9,10 @@ Post https://three41-week-3-4.onrender.com/users
 Content-Type: application/json
 
 {
-    "firstName": "Ray",
+    "firstName": "Nick",
     "lastName": "Ruppe",
     "password": "thissimypasswords",
-    "email": "ray.ruppe@gmail.com"
+    "email": "Nick.ruppe@gmail.com"
 }
 
 ### update user
@@ -22,12 +22,12 @@ Content-Type: application/json
 {
     "firstName": "Noah",
     "lastName": "Ruppe",
-    "password": "GreatPassword",
+    "password": "thisisgreat22",
     "email": "nick.ruppe1125@gmail.com"
 }
 
 ### delete the user
-Delete https://three41-week-3-4.onrender.com/users/67dcbadf89140ef9a69ba755
+Delete https://three41-week-3-4.onrender.com/users/67dddd31a481de3397af53a6
 
 
 
@@ -38,10 +38,10 @@ Delete https://three41-week-3-4.onrender.com/users/67dcbadf89140ef9a69ba755
 Get https://three41-week-3-4.onrender.com/tasks/67db68fd2f31d775f9062704
 
 ### get single task for user   taskid
-Get https://three41-week-3-4.onrender.com/tasks/67dcb9e165d31fd6e1aa1819
+Get https://three41-week-3-4.onrender.com/tasks/67dca22ae1593be37c9b4b63/67db68fd2f31d775f9062704
 
 ### create a new task userid
-POST  https://three41-week-3-4.onrender.com/tasks/67db68fd2f31d775f9062704
+POST  https://three41-week-3-4.onrender.com/tasks
 Content-Type: application/json
 
 {

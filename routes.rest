@@ -38,7 +38,7 @@ Delete https://three41-week-3-4.onrender.com/users/67dddd31a481de3397af53a6
 Get https://three41-week-3-4.onrender.com/tasks/67db68fd2f31d775f9062704
 
 ### get single task for user   taskid
-Get https://three41-week-3-4.onrender.com/tasks/67db68fd2f31d775f9062704/67dcb9e165d31fd6e1aa1819
+Get http://localhost:3001/tasks/67db68fd2f31d775f9062704/67dcb9e165d31fd6e1aa1819
 
 ### create a new task userid
 POST  https://three41-week-3-4.onrender.com/tasks

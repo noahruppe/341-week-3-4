@@ -5,7 +5,7 @@
     "description": "User API",
     "version": "1.0.0"
   },
-  "host": "https://three41-week-3-4.onrender.com",
+  "host": "three41-week-3-4.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"

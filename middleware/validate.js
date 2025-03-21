@@ -9,7 +9,7 @@ const saveUser = async (req, res, next) => {
 
     await validator(req.body, validationRule, {}, (err, status) => {
         if (!status) {
-            res.status(412)
+            res.status(400)
                 .send({
                     success: false,
                     message: 'Validation failed',
@@ -35,7 +35,7 @@ const saveTask = async (req, res, next) => {
 
     await validator(req.body, validationRule, {}, (err, status) => {
         if (!status) {
-            res.status(412)
+            res.status(400)
                 .send({
                     success: false,
                     message: 'Validation failed',

@@ -3,7 +3,7 @@ const saveUser = async (req, res, next) => {
     const validationRule = {
         "firstName": "required|string",
         "lastName": "required|string",
-        "password": "required|string|min:6|confirmed",
+        "password": "required|string|min:6",
         "email": "required|string|email"
     };
 

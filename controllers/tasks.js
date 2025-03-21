@@ -25,7 +25,7 @@ const getSingle = async (req, res) => {
         
         const userId = new ObjectId(req.params.userid);
         const tasksId = new ObjectId(req.params.taskid);
-        const result = await mongodb.getDatabase().db().collection("tasks").find({ _id: tasksId, userId: userId });
+        const result = await mongodb.getDatabase().db().collection("tasks").find({userId: userId , _id: tasksId});
         const tasks = await result.toArray();
 
         res.setHeader("Content-type", "application/json");

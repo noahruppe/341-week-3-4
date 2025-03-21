@@ -6,7 +6,7 @@ const validation = require("../middleware/validate")
 
 router.get("/:id", taskController.getAll);
 
-router.get("/:taskid/:userid", taskController.getSingle);
+router.get("/:userid/:taskid", taskController.getSingle);
 
 router.post("/:userId",validation.saveTask, taskController.createTask);
 

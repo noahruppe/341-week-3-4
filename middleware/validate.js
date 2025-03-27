@@ -6,13 +6,6 @@ const saveUser = async (req, res, next) => {
         "password": "required|string|min:6",
         "email": "required|string|email"
     };
-    const validation = validator(req.body, validationRule);
-    if (!validation.isValid) {
-        return res.status(400).json({ message: validation.error });
-    }
-
-    next();
-    
 
     await validator(req.body, validationRule, {}, (err, status) => {
         if (!status) {

@@ -38,11 +38,10 @@ const getSingle = async (req, res) => {
 const CreateUser = async (req, res) => {
     // #swagger.tags = ["Users"]
     try {
-        const hashedPassword = await bcrypt.hash(req.body.password, 10);
         const user = {
             firstName: req.body.firstName,
             lastName: req.body.lastName,
-            password: hashedPassword,
+            password: req.body.password,
             email: req.body.email
         };
 

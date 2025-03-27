@@ -1,5 +1,6 @@
 const mongodb = require("../data/database");
 const ObjectId = require("mongodb").ObjectId;
+const bycrypt = require("bcrypt");
 
 const getAll = async (req, res) => {
     // #swagger.tags = ["Users"]
@@ -37,10 +38,11 @@ const getSingle = async (req, res) => {
 const CreateUser = async (req, res) => {
     // #swagger.tags = ["Users"]
     try {
+        const hashedPassword = await bcrypt.hash(req.body.password, 10);
         const user = {
             firstName: req.body.firstName,
             lastName: req.body.lastName,
-            password: req.body.password,
+            password: hashedPassword,
             email: req.body.email
         };
 

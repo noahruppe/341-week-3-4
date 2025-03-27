@@ -22,12 +22,12 @@ Content-Type: application/json
 {
     "firstName": "Noah",
     "lastName": "Ruppe",
-    "password": "Thisismynewpassword",
-    "email": "nick.ruppe1125@gmail.com"
+    "password": "password1",
+    "email": "noah.ruppe1125@gmail.com"
 }
 
 ### delete the user
-Delete https://three41-week-3-4.onrender.com/users/67dde38752284c237379428d
+Delete https://three41-week-3-4.onrender.com/users/67de4087f445b8d557646ca7
 
 
 
@@ -55,20 +55,20 @@ Content-Type: application/json
 
 
 ### update the task userid/taskid
-PUT https://three41-week-3-4.onrender.com/tasks/67db68fd2f31d775f9062704/67dca22ae1593be37c9b4b63
+PUT https://three41-week-3-4.onrender.com/tasks/67db68fd2f31d775f9062704/67e48806f18fd5b212727385
 Content-Type: application/json
 
 {
     "title": "Node project",
     "description": "this shows my skills in node",
     "dueDate": "March 22, 2025",
-    "progress": "working on it.",
+    "progress": "finished1111q it.",
     "instructor": "jeremy lindsy",
     "subject": "node class"
 }
 
 
 ### delete a task  userid/taskid
-Delete  https://three41-week-3-4.onrender.com/tasks/67db68fd2f31d775f9062704/67dde3de52284c237379428e
+Delete  https://three41-week-3-4.onrender.com/tasks/67db68fd2f31d775f9062704/67de4246f445b8d557646cab
 
 

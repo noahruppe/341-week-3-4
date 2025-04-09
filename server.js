@@ -10,7 +10,7 @@ const cors = require("cors");
 
 app.use(bodyParser.json());
 app.use(session({
-    secret: 3948109348213048,
+    secret: "3948109348213048",
     resave: false,
     saveUninitialized: false
 }));
